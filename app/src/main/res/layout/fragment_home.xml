@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_medium"
+    android:background="@color/background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inicio"
+        style="@style/TitleText"
+        android:layout_marginBottom="@dimen/margin_medium" />
+
+    <!-- Banner de ofertas -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/bg_rounded_card"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_medium">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¡Hasta 30% OFF!"
+                android:textColor="@color/accent"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_medium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="En productos sostenibles"
+                android:textColor="@color/textPrimary"
+                android:textSize="@dimen/text_small" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comprar ahora"
+            style="@style/RoundedButton"
+            android:textSize="12sp"
+            android:paddingStart="@dimen/margin_small"
+            android:paddingEnd="@dimen/margin_small" />
+
+    </LinearLayout>
+
+    <!-- Categorías populares -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categorías populares"
+        style="@style/SubtitleText"
+        android:layout_marginBottom="@dimen/margin_small" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_medium">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Categoría 1 -->
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_rounded_card"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:padding="@dimen/margin_small">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🌿"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Eco"
+                    android:textSize="@dimen/text_small"
+                    android:textColor="@color/textPrimary" />
+
+            </LinearLayout>
+
+            <!-- Categoría 2 -->
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_rounded_card"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:padding="@dimen/margin_small">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🧴"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cosmética"
+                    android:textSize="@dimen/text_small"
+                    android:textColor="@color/textPrimary" />
+
+            </LinearLayout>
+
+            <!-- Categoría 3 -->
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_rounded_card"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:padding="@dimen/margin_small">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="👜"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Accesorios"
+                    android:textSize="@dimen/text_small"
+                    android:textColor="@color/textPrimary" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <!-- Productos recomendados -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Productos recomendados"
+        style="@style/SubtitleText"
+        android:layout_marginBottom="@dimen/margin_small" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProductos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

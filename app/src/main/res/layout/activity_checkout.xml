@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_medium">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Método de pago"
+                style="@style/TitleText"
+                android:layout_marginBottom="@dimen/margin_medium" />
+
+            <!-- Opción Tarjeta -->
+            <LinearLayout
+                android:id="@+id/layoutCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_rounded_card"
+                android:padding="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_small">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="💳 Tarjeta de crédito/débito"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/text_medium" />
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/bg_rounded_card" />
+
+            </LinearLayout>
+
+            <!-- Campos de tarjeta (ocultos por defecto) -->
+            <LinearLayout
+                android:id="@+id/cardFields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginBottom="@dimen/margin_medium">
+
+                <EditText
+                    android:id="@+id/etCardNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/input_height"
+                    android:hint="Número de tarjeta"
+                    android:inputType="number"
+                    android:background="@drawable/bg_rounded_card"
+                    android:paddingStart="@dimen/margin_medium"
+                    android:paddingEnd="@dimen/margin_medium"
+                    android:layout_marginBottom="@dimen/margin_small" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/etExpiry"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/input_height"
+                        android:layout_weight="1"
+                        android:hint="MM/AA"
+                        android:inputType="date"
+                        android:background="@drawable/bg_rounded_card"
+                        android:paddingStart="@dimen/margin_medium"
+                        android:paddingEnd="@dimen/margin_medium"
+                        android:layout_marginEnd="@dimen/margin_small" />
+
+                    <EditText
+                        android:id="@+id/etCVV"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/input_height"
+                        android:layout_weight="1"
+                        android:hint="CVV"
+                        android:inputType="number"
+                        android:background="@drawable/bg_rounded_card"
+                        android:paddingStart="@dimen/margin_medium"
+                        android:paddingEnd="@dimen/margin_medium" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Opción PSE -->
+            <LinearLayout
+                android:id="@+id/layoutPSE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_rounded_card"
+                android:padding="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_small">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🏦 PSE - Transferencia bancaria"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/text_medium" />
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/bg_rounded_card" />
+
+            </LinearLayout>
+
+            <!-- Opción Transferencia -->
+            <LinearLayout
+                android:id="@+id/layoutTransfer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_rounded_card"
+                android:padding="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_medium">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🏧 Transferencia bancaria"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/text_medium" />
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/bg_rounded_card" />
+
+            </LinearLayout>
+
+            <!-- Resumen del pago -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_rounded_card"
+                android:padding="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_medium">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Resumen del pago"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    android:textColor="@color/textPrimary"
+                    android:layout_marginBottom="@dimen/margin_small" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Total a pagar:"
+                        android:textColor="@color/textSecondary" />
+
+                    <TextView
+                        android:id="@+id/tvTotalAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$70,160"
+                        android:textColor="@color/primary"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text_large" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Botón confirmar pago -->
+            <Button
+                android:id="@+id/btnConfirmPayment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:text="Confirmar pago"
+                style="@style/RoundedButton" />
+
+            <!-- Mensaje de seguridad -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔒 Tus datos están protegidos con cifrado TLS"
+                android:textColor="@color/textSecondary"
+                android:textSize="@dimen/text_small"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_medium" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

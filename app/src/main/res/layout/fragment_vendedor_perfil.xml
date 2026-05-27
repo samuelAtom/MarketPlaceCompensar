@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_medium"
+    android:background="@color/background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Perfil del Vendedor"
+        style="@style/TitleText"
+        android:layout_marginBottom="@dimen/margin_medium" />
+
+    <!-- Foto de perfil -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/margin_large">
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/bg_rounded_card" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cambiar foto"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/text_small"
+            android:layout_marginTop="@dimen/margin_small" />
+
+    </LinearLayout>
+
+    <!-- Datos personales -->
+    <EditText
+        android:id="@+id/etVendedorName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:hint="Nombre completo"
+        android:background="@drawable/bg_rounded_card"
+        android:paddingStart="@dimen/margin_medium"
+        android:paddingEnd="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_small" />
+
+    <EditText
+        android:id="@+id/etVendedorEmail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:hint="Correo electrónico"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/bg_rounded_card"
+        android:paddingStart="@dimen/margin_medium"
+        android:paddingEnd="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_small" />
+
+    <EditText
+        android:id="@+id/etVendedorPhone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:hint="Teléfono"
+        android:inputType="phone"
+        android:background="@drawable/bg_rounded_card"
+        android:paddingStart="@dimen/margin_medium"
+        android:paddingEnd="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_small" />
+
+    <EditText
+        android:id="@+id/etVendedorDocument"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:hint="Documento de identidad"
+        android:inputType="number"
+        android:background="@drawable/bg_rounded_card"
+        android:paddingStart="@dimen/margin_medium"
+        android:paddingEnd="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_small" />
+
+    <EditText
+        android:id="@+id/etVendedorBank"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:hint="Datos bancarios"
+        android:background="@drawable/bg_rounded_card"
+        android:paddingStart="@dimen/margin_medium"
+        android:paddingEnd="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_medium" />
+
+    <!-- Switch de disponibilidad -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_rounded_card"
+        android:padding="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_medium">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Disponible para ventas"
+            android:textColor="@color/textPrimary" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchAvailability"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <!-- Botones -->
+    <Button
+        android:id="@+id/btnSaveVendedorProfile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:text="Guardar cambios"
+        style="@style/RoundedButton"
+        android:layout_marginBottom="@dimen/margin_small" />
+
+    <Button
+        android:id="@+id/btnVendedorLogout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:text="Cerrar sesión"
+        android:background="@drawable/bg_rounded_card"
+        android:textColor="@color/error" />
+
+</LinearLayout>

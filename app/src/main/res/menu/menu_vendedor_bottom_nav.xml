@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_vendedor_productos"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="Productos" />
+
+    <item
+        android:id="@+id/nav_vendedor_ordenes"
+        android:icon="@android:drawable/ic_menu_recent_history"
+        android:title="Pedidos" />
+
+    <item
+        android:id="@+id/nav_vendedor_perfil"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:title="Perfil" />
+
+</menu>

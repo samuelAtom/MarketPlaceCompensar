@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_admin_dashboard"
+            android:icon="@android:drawable/ic_menu_info_details"
+            android:title="Dashboard" />
+
+        <item
+            android:id="@+id/nav_admin_usuarios"
+            android:icon="@android:drawable/ic_menu_add"
+            android:title="Gestión de Usuarios" />
+
+        <item
+            android:id="@+id/nav_admin_productos"
+            android:icon="@android:drawable/ic_menu_edit"
+            android:title="Gestión de Productos" />
+
+        <item
+            android:id="@+id/nav_admin_reportes"
+            android:icon="@android:drawable/ic_menu_sort_by_size"
+            android:title="Reporte de Ventas" />
+    </group>
+
+</menu>

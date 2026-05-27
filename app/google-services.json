@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "483287603029",
+    "project_id": "marketplacecompensar",
+    "storage_bucket": "marketplacecompensar.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:483287603029:android:d8f57682512b6af5ecc1dc",
+        "android_client_info": {
+          "package_name": "com.tienda.marketplacecompensar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCj6U6Den0yjXAt3G4CVEo-Nnk55nRwOzI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

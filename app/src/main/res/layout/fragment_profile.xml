@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_medium"
+    android:background="@color/background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mi Perfil"
+        style="@style/TitleText"
+        android:layout_marginBottom="@dimen/margin_medium" />
+
+    <!-- Foto de perfil -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/margin_large">
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/bg_rounded_card" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cambiar foto"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/text_small"
+            android:layout_marginTop="@dimen/margin_small" />
+
+    </LinearLayout>
+
+    <!-- Datos personales -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Datos personales"
+        style="@style/SubtitleText"
+        android:layout_marginBottom="@dimen/margin_small" />
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:hint="Nombre completo"
+        android:background="@drawable/bg_rounded_card"
+        android:paddingStart="@dimen/margin_medium"
+        android:paddingEnd="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_small" />
+
+    <EditText
+        android:id="@+id/etEmailProfile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:hint="Correo electrónico"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/bg_rounded_card"
+        android:paddingStart="@dimen/margin_medium"
+        android:paddingEnd="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_small" />
+
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:hint="Teléfono"
+        android:inputType="phone"
+        android:background="@drawable/bg_rounded_card"
+        android:paddingStart="@dimen/margin_medium"
+        android:paddingEnd="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_small" />
+
+    <EditText
+        android:id="@+id/etAddress"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:hint="Dirección de envío"
+        android:background="@drawable/bg_rounded_card"
+        android:paddingStart="@dimen/margin_medium"
+        android:paddingEnd="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_medium" />
+
+    <!-- Botones -->
+    <Button
+        android:id="@+id/btnSaveProfile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:text="Guardar cambios"
+        style="@style/RoundedButton"
+        android:layout_marginBottom="@dimen/margin_small" />
+
+    <Button
+        android:id="@+id/btnChangePassword"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:text="Cambiar contraseña"
+        android:background="@drawable/bg_rounded_card"
+        android:textColor="@color/primary"
+        android:layout_marginBottom="@dimen/margin_small" />
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:text="Cerrar sesión"
+        android:background="@drawable/bg_rounded_card"
+        android:textColor="@color/error" />
+
+</LinearLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_medium"
+    android:background="@color/background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reporte de Ventas"
+        style="@style/TitleText"
+        android:layout_marginBottom="@dimen/margin_medium" />
+
+    <!-- Filtro de fechas -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/margin_medium">
+
+        <EditText
+            android:id="@+id/etFechaInicio"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/input_height"
+            android:layout_weight="1"
+            android:hint="Fecha inicio"
+            android:background="@drawable/bg_rounded_card"
+            android:paddingStart="@dimen/margin_medium"
+            android:paddingEnd="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_small" />
+
+        <EditText
+            android:id="@+id/etFechaFin"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/input_height"
+            android:layout_weight="1"
+            android:hint="Fecha fin"
+            android:background="@drawable/bg_rounded_card"
+            android:paddingStart="@dimen/margin_medium"
+            android:paddingEnd="@dimen/margin_medium" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnFiltrarReportes"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:text="Filtrar"
+        style="@style/RoundedButton"
+        android:layout_marginBottom="@dimen/margin_medium" />
+
+    <!-- Tarjetas de resumen -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/margin_medium">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/bg_rounded_card"
+            android:gravity="center"
+            android:layout_marginEnd="@dimen/margin_small">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Ventas"
+                android:textColor="@color/textSecondary"
+                android:textSize="@dimen/text_small" />
+
+            <TextView
+                android:id="@+id/tvTotalVentas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$0"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/bg_rounded_card"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N° Pedidos"
+                android:textColor="@color/textSecondary"
+                android:textSize="@dimen/text_small" />
+
+            <TextView
+                android:id="@+id/tvNumPedidos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Gráfico de ventas (placeholder) -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ventas por período"
+        style="@style/SubtitleText"
+        android:layout_marginBottom="@dimen/margin_small" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_rounded_card"
+        android:layout_marginBottom="@dimen/margin_medium" />
+
+    <!-- Botón exportar -->
+    <Button
+        android:id="@+id/btnExportarReporte"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:text="Exportar reporte (PDF)"
+        android:background="@drawable/bg_rounded_card"
+        android:textColor="@color/primary" />
+
+</LinearLayout>

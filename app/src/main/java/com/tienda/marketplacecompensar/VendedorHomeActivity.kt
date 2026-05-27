@@ -10,6 +10,19 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+/**
+ * VendedorHomeActivity - Panel de control del vendedor
+ *
+ * Esta actividad permite a los vendedores gestionar sus productos.
+ * Funcionalidades principales:
+ * - Ver lista de productos propios (RecyclerView)
+ * - Agregar nuevos productos (nombre, descripción, precio, stock, categoría)
+ * - Editar productos existentes
+ * - Eliminar productos
+ *
+ * Los productos se almacenan en Firestore en la colección "productos"
+ * Cada producto está asociado al vendedor por su ID
+ */
 
 class VendedorHomeActivity : AppCompatActivity() {
 

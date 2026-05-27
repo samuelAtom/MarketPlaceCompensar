@@ -9,6 +9,18 @@ import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.location.Priority
 import java.util.Locale
+/**
+ * LocationHelper - Clase auxiliar para geolocalización
+ *
+ * Esta clase proporciona métodos para obtener la ubicación actual del usuario.
+ * Utiliza FusedLocationProviderClient de Google Play Services.
+ *
+ * Funcionalidades:
+ * - Verificar si el usuario ha concedido permisos de ubicación
+ * - Obtener la ubicación actual (latitud, longitud)
+ * - Convertir coordenadas a dirección legible usando Geocoder
+ * - Manejar errores y permisos de forma segura
+ */
 
 class LocationHelper(private val context: Context) {
 

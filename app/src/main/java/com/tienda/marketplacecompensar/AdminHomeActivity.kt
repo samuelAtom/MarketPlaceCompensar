@@ -10,7 +10,19 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-
+/**
+ * AdminHomeActivity - Panel de control del administrador
+ *
+ * Esta actividad permite al administrador gestionar todos los usuarios de la aplicación.
+ * Funcionalidades principales:
+ * - Ver lista completa de usuarios (RecyclerView)
+ * - Buscar usuarios por correo electrónico
+ * - Agregar nuevos usuarios (crea cuenta en Firebase Auth y Firestore)
+ * - Editar el rol de cualquier usuario (comprador, vendedor, admin)
+ * - Eliminar usuarios de la base de datos
+ *
+ * Los datos se almacenan en Firestore en la colección "usuarios"
+ */
 class AdminHomeActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth

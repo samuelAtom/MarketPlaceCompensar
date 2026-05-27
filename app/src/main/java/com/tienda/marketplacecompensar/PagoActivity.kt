@@ -5,6 +5,21 @@ import android.os.Bundle
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+/**
+ * PagoActivity - Pasarela de pagos simulada
+ *
+ * Esta actividad simula el proceso de pago de una compra.
+ * Funcionalidades principales:
+ * - Ingresar dirección de envío (calle, ciudad, código postal)
+ * - Seleccionar método de pago (Tarjeta o PSE)
+ * - Completar datos de pago según método seleccionado:
+ *   - Tarjeta: número, fecha, CVV, nombre del titular
+ *   - PSE: banco, tipo de cuenta, número de cuenta
+ * - Confirmar pago y recibir mensaje de éxito
+ *
+ * Es una simulación académica, no procesa pagos reales.
+ * Al confirmar, envía resultado exitoso a CarritoActivity para vaciar el carrito
+ */
 
 class PagoActivity : AppCompatActivity() {
 

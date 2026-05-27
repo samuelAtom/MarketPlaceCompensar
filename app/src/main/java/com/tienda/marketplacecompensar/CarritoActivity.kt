@@ -10,6 +10,21 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+/**
+ * CarritoActivity - Carrito de compras del comprador
+ *
+ * Esta actividad permite gestionar el carrito de compras antes de pagar.
+ * Funcionalidades principales:
+ * - Ver productos agregados al carrito (RecyclerView)
+ * - Aumentar o disminuir la cantidad de cada producto
+ * - Eliminar productos individualmente
+ * - Calcular el total de la compra
+ * - Proceder al pago (PagoActivity)
+ * - Vaciar el carrito después de una compra exitosa
+ *
+ * Los datos del carrito se almacenan en Firestore (colección "carritos")
+ * Cada item tiene: productoId, nombre, precio, cantidad, vendedorId, usuarioId
+ */
 
 class CarritoActivity : AppCompatActivity() {
 

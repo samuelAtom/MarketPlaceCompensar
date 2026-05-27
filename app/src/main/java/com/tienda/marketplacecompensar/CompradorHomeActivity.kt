@@ -13,6 +13,20 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+/**
+ * CompradorHomeActivity - Tienda para compradores
+ *
+ * Esta actividad permite a los compradores explorar y comprar productos.
+ * Funcionalidades principales:
+ * - Ver todos los productos disponibles (RecyclerView)
+ * - Buscar productos por nombre
+ * - Obtener ubicación actual y convertirla a dirección (geolocalización)
+ * - Agregar productos al carrito de compras
+ * - Navegar al carrito de compras (CarritoActivity)
+ *
+ * Los productos se cargan desde Firestore (colección "productos")
+ * Los items del carrito se guardan en Firestore (colección "carritos")
+ */
 
 class CompradorHomeActivity : AppCompatActivity() {
 

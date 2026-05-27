@@ -12,6 +12,22 @@ import androidx.core.content.ContextCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import java.util.concurrent.Executor
+/**
+ * LoginActivity - Pantalla de inicio de sesión
+ *
+ * Esta actividad permite a los usuarios autenticarse en la aplicación mediante:
+ * - Correo electrónico y contraseña (Firebase Authentication)
+ * - Autenticación biométrica con huella digital
+ *
+ * También ofrece opciones para:
+ * - Registrarse como nuevo usuario
+ * - Recuperar contraseña (envío de correo de restablecimiento)
+ *
+ * Después de una autenticación exitosa, redirige al usuario según su rol:
+ * - admin -> AdminHomeActivity (gestión de usuarios)
+ * - vendedor -> VendedorHomeActivity (gestión de productos)
+ * - comprador -> CompradorHomeActivity (tienda y carrito)
+ */
 
 class LoginActivity : AppCompatActivity() {
 
